@@ -37,4 +37,10 @@
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .guidelines {
+    color: red;
+  }
+}
+
 

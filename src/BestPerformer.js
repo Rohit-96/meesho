@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import './index.css'
 import { 
-  Button, Card, CardBody, CardHeader, CardFooter, CardImg, Modal, ModalHeader, ModalBody, ModalFooter,
+  Button, Card, CardBody, CardHeader, CardFooter, CardImg, Modal, ModalHeader, ModalBody, ModalFooter, Navbar,
 } from 'reactstrap';
 import QRCode from 'qrcode.react';
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 function BestPerformer() {
     // const websiteUrl = 'https://www.google.com';
@@ -24,28 +26,35 @@ function BestPerformer() {
 
       <Card style={{backgroundColor: "#F8E8EE"}}>
         <CardHeader style={{minHeight: "15vh"}} className='App'>
-        <CardImg
-            style={{height: "80px", width: "100px", marginLeft: "49px", marginTop: "35px"}}
+          <CardImg
+            style={{height: "80px", width: "100px", marginTop: "35px"}}
             // alt=
             src = "../images/meesho_logo.png"
             layout="fill"
             top
-            />
+          />
         </CardHeader>
         <hr style={{width: "100%", color: "white"}}/>
 
-        <CardBody style={{minHeight: "78vh", marginLeft: "100px", marginTop: "50px"}}>
+        <CardBody style={{minHeight: "78vh", marginLeft: "30px", marginTop: "50px", marginRight: "30px"}}>
+
             <div style={{display:"flex"}}>
                 <div>
                     <h2>Guidelines for posting on Linkedin</h2>
-                    <ol style={{lineHeight: "35px"}}>
-                        <li>Copy the text by clicking on "Copy to Clipboard."</li>
-                        <li>Select "Share on LinkedIn"</li>
-                        <li>Choose "Share in a post"</li>
-                        <li>Paste the copied text and make any desired edits</li>
-                        <li>Finally, click on "Post" to share your content.</li>
-                    </ol>
+                    {/* <ol style={{lineHeight: "35px"}}> */}
+                        <p>1. Copy the text by clicking on "Copy to Clipboard."</p>
+                        <p>2. Select "Share on LinkedIn"</p>
+                        <p>3. Choose "Share in a post"</p>
+                        <p>4. Paste the copied text and make any desired edits</p>
+                        <p>5. Finally, click on "Post" to share your content.</p>
+                    {/* </ol> */}
                 </div>
+
+                {/* <div style={{marginLeft: "60%"}}>
+                  <Button style={{height: "40px", paddingLeft: "10px", paddingRight: "10px", backgroundColor: "#34495e", border: "none", borderRadius: "5px"}}>
+                    <Link style={{textDecoration: "none", color: "white"}} to="/backtooffice">Back to Office Page</Link>
+                  </Button>
+                </div> */}
 
                 {/* <div style={{marginLeft: "30%"}}>
                     <h1>Generate QR Code for My Webpage</h1>
@@ -53,9 +62,9 @@ function BestPerformer() {
                 </div> */}
             </div>
 
-          <div style={{marginTop: "20px", marginLeft: "20px"}}>
+          <div style={{marginTop: "20px"}}>
             <Button 
-              style={{marginRight: "20px", height: "40px", paddingLeft: "10px", paddingRight: "10px", backgroundColor: "#9ff111", border: "none", borderRadius: "5px"}}
+              style={{marginRight: "20px", height: "40px", paddingLeft: "10px", paddingRight: "10px", backgroundColor: "#566573", border: "none", borderRadius: "5px", color: "white"}}
               onClick={handleCopyToClipboard}
             >
               Copy to Clipboard
@@ -71,8 +80,8 @@ function BestPerformer() {
             </a>
           </div>
 
-          <div style={{marginLeft: "10px", marginTop: "70px"}}>
-            <h3 style={{marginLeft: "10px"}}>Text that will be copied</h3>
+          <div style={{marginTop: "70px"}}>
+            <h3>Text that will be copied</h3>
             <p id='content' style={{marginLeft: "10px"}}>Thrilled to share that our awesome team just won the "Star Team of the Quarter" as part of Panchayat Quarterly Awards at @Meesho!<br /><br />
               Huge shoutout to every team member for their incredible dedication, collaboration, and hard work. <br /><br />
               Let's continue to conquer new milestones together! <br /><br />
