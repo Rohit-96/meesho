@@ -5,7 +5,7 @@ import QRCode from 'qrcode.react';
 
 
 function BackToOffice() {
-    const websiteUrl = 'https://www.google.com';
+    // const websiteUrl = 'https://www.google.com';
 
     const handleCopyToClipboard = async()=> {
         let text = document.getElementById("content").innerText
@@ -70,7 +70,7 @@ function BackToOffice() {
           </div>
 
           <div style={{marginLeft: "10px", marginTop: "70px"}}>
-            <h3 style={{marginLeft: "10px"}}>Text that will be coppied</h3>
+            <h3 style={{marginLeft: "10px"}}>Text that will be copied</h3>
             <p id='content' style={{marginLeft: "10px"}}>The past week at @meesho has been filled with joyful reunions, catching up on stories, and embracing the sense of togetherness that we've missed!<br /><br />
               Exciting times as we all finally return to the office! <br /><br />
               #LifeAtMeesho #BacktoOffice

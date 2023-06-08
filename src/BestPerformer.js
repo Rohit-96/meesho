@@ -7,8 +7,7 @@ import QRCode from 'qrcode.react';
 import React, {useState} from 'react';
 
 function BestPerformer() {
-  const [openModal, setOpenModal] = useState(false)
-    const websiteUrl = 'https://www.google.com';
+    // const websiteUrl = 'https://www.google.com';
 
     const handleCopyToClipboard = async()=> {
         let text = document.getElementById("content").innerText
@@ -73,7 +72,7 @@ function BestPerformer() {
           </div>
 
           <div style={{marginLeft: "10px", marginTop: "70px"}}>
-            <h3 style={{marginLeft: "10px"}}>Text that will be coppied</h3>
+            <h3 style={{marginLeft: "10px"}}>Text that will be copied</h3>
             <p id='content' style={{marginLeft: "10px"}}>Thrilled to share that our awesome team just won the "Star Team of the Quarter" as part of Panchayat Quarterly Awards at @Meesho!<br /><br />
               Huge shoutout to every team member for their incredible dedication, collaboration, and hard work. <br /><br />
               Let's continue to conquer new milestones together! <br /><br />
